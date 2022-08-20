@@ -78,7 +78,7 @@ windows = {
     left_1_3 = {
         prefix = {"Ctrl", "Option"},
         key = "D",
-        message = "Left 1/3(Horizontal screen) Or Top 1/3(Vertical screen)"
+        message = "Left/Top 1/3"
     },
     -- 中 1/3
     middle = {prefix = {"Ctrl", "Option"}, key = "F", message = "Middle 1/3"},
@@ -170,7 +170,7 @@ applications = {
     {prefix = {"Option"}, key = "N", message = "Notion", bundleId = "notion.id"},
     {
         prefix = {"Option"},
-        key = "D",
+        key = "G",
         message = "DataGrip",
         bundleId = "com.jetbrains.datagrip"
     }, {
@@ -191,12 +191,17 @@ applications = {
         bundleId = "com.spotify.client"
     }, {
         prefix = {"Option"},
-        key = "L",
+        key = "T",
         message = "Todoist",
         bundleId = "com.todoist.mac.Todoist"
     }, {
         prefix = {"Option"},
         key = "S",
+        message = "System Preferences",
+        bundleId = "com.apple.systempreferences"
+    }, {
+        prefix = {"Option"},
+        key = "W",
         message = "WebStorm",
         bundleId = "com.jetbrains.WebStorm"
     }
