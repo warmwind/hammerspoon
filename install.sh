@@ -10,7 +10,7 @@ then
 fi
 
 cd "$WORKING_DIR" || exit
-echo "工作目录：$WORKING_DIR"
+echo "Working directory：$WORKING_DIR"
 # 删除旧文件
 rm -rf *
 rm -rf .idea
@@ -20,9 +20,9 @@ rm -rf .gitignore
 rm -rf .config
 rm -rf .emoji
 # 拉取工程（为加快拉取速度，不拉取历史记录）
-git clone git@github.com:KURANADO2/hammerspoon-kuranado.git --depth=1
-mv hammerspoon-kuranado/* .
-mv hammerspoon-kuranado/.git .
-mv hammerspoon-kuranado/.gitignore .
-rm -rf hammerspoon-kuranado
+git clone git@github.com:warmwind/hammerspoon.git --depth=1
+mv hammerspoon/* .
+mv hammerspoon/.git .
+mv hammerspoon/.gitignore .
+rm -rf hammerspoon
 cp modules/shortcut.lua.example modules/shortcut.lua

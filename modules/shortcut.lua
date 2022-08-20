@@ -206,7 +206,7 @@ applications = {
         bundleId = "com.apple.systempreferences"
     }, {
         prefix = {"Option"},
-        key = "W",
+        key = "Z",
         message = "WebStorm",
         bundleId = "com.jetbrains.WebStorm"
     }
