@@ -2,27 +2,21 @@
 
 require 'modules.shortcut'
 
-local INPUT_CHINESE = 'com.apple.inputmethod.SCIM.ITABC'
-local INPUT_ABC = 'com.apple.keylayout.ABC'
-local INPUT_HIRAGANA = 'com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese'
+local INPUT_SOUGOU = 'com.sogou.inputmethod.sogou.pinyin'
+local INPUT_US = 'com.apple.keylayout.US'
 
--- 简体拼音
-local function chinese()
-    hs.keycodes.currentSourceID(INPUT_CHINESE)
+-- 搜狗拼音
+local function sougou()
+    hs.keycodes.currentSourceID(INPUT_SOUGOU)
 end
 
--- ABC
-local function abc()
-    hs.keycodes.currentSourceID(INPUT_ABC)
+-- US
+local function us()
+    hs.keycodes.currentSourceID(INPUT_US)
 end
 
--- 平假名
-local function hiragana()
-    hs.keycodes.currentSourceID(INPUT_HIRAGANA)
-end
 
 if (input_methods ~= nil) then
-    hs.hotkey.bind(input_methods.abc.prefix, input_methods.abc.key, input_methods.abc.message, abc)
-    hs.hotkey.bind(input_methods.chinese.prefix, input_methods.chinese.key, input_methods.chinese.message, chinese)
-    hs.hotkey.bind(input_methods.japanese.prefix, input_methods.japanese.key, input_methods.japanese.message, hiragana)
+    hs.hotkey.bind(input_methods.us.prefix, input_methods.us.key, input_methods.us.message, us)
+    hs.hotkey.bind(input_methods.sougou.prefix, input_methods.sougou.key, input_methods.sougou.message, sougou)
 end
