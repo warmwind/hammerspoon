@@ -214,7 +214,7 @@ input_methods = {
 }
 
 -- 表情包搜索快捷键配置
-emoji_search = {prefix = {"Option"}, key = "E"}
+emoji_search = {prefix = {"Option"}, key = "E", message = "Emoji Search"}
 
 -- 密码粘贴快捷键配置
 password_paste = {

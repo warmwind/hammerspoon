@@ -35,13 +35,13 @@ function formatText()
     -- 快捷键分类
     -- 应用切换类
     local applicationSwitchText = {}
-    table.insert(applicationSwitchText, {msg = '[Application Switch:]'})
+    table.insert(applicationSwitchText, {msg = '---------Application-----------'})
     -- 窗口管理类
     local windowManagement = {}
-    table.insert(windowManagement, {msg = '[Window Management:]'})
+    table.insert(windowManagement, {msg = '---------Window---------'})
     -- 密码粘贴类
     local passwordPaste = {}
-    table.insert(passwordPaste, {msg = '[Password Paste:]'})
+    table.insert(passwordPaste, {msg = '---------Password Paste---------'})
 
     -- 每行最多 40 个字符
     local MAX_LEN = 40
@@ -66,6 +66,7 @@ function formatText()
     for k, v in ipairs(applicationSwitchText) do
         table.insert(hotkeys, {msg = v.msg})
     end
+
     for k, v in ipairs(windowManagement) do
         table.insert(hotkeys, {msg = v.msg})
     end
@@ -94,12 +95,12 @@ function formatText()
 end
 
 function drawText(renderText)
-    -- 每列最多 20 行
-    local MAX_LINE_NUM = 20
+    -- 每列最多 30 行
+    local MAX_LINE_NUM = 30
     local w = 0
     local h = 0
     -- 文本距离分割线的距离
-    local SEPRATOR_W = 5;
+    local SEPRATOR_W = 20;
 
     -- 每一列需要显示的文本
     local column = ''
