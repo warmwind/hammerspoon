@@ -2,7 +2,7 @@
 defaultConfig = {{
     -- 配置版本号
     -- 每次新增功能项，需将版本号加 1
-    configVersion = '6'
+    configVersion = '7'
 }, {
     module = 'modules.window',
     name = '窗口管理',
@@ -26,6 +26,10 @@ defaultConfig = {{
 }, {
     module = 'modules.network',
     name = '实时网速',
+    enable = true
+}, {
+    module = 'modules.spotify',
+    name = 'Spotify',
     enable = true
 }, {
     module = 'modules.keystroke-visualizer',
