@@ -56,24 +56,24 @@ windows = {
         key = "K",
         message = "Right Bottom"
     },
---     -- 1/9
---     one = {prefix = {"Ctrl", "Option"}, key = "1", message = "1/9"},
---     -- 2/9
---     two = {prefix = {"Ctrl", "Option"}, key = "2", message = "2/9"},
---     -- 3/9
---     three = {prefix = {"Ctrl", "Option"}, key = "3", message = "3/9"},
---     -- 4/9
---     four = {prefix = {"Ctrl", "Option"}, key = "4", message = "4/9"},
---     -- 5/9
---     five = {prefix = {"Ctrl", "Option"}, key = "5", message = "5/9"},
---     -- 6/9
---     six = {prefix = {"Ctrl", "Option"}, key = "6", message = "6/9"},
---     -- 7/9
---     seven = {prefix = {"Ctrl", "Option"}, key = "7", message = "7/9"},
---     -- 8/9
---     eight = {prefix = {"Ctrl", "Option"}, key = "8", message = "8/9"},
---     -- 9/9
---     nine = {prefix = {"Ctrl", "Option"}, key = "9", message = "9/9"},
+    --     -- 1/9
+    --     one = {prefix = {"Ctrl", "Option"}, key = "1", message = "1/9"},
+    --     -- 2/9
+    --     two = {prefix = {"Ctrl", "Option"}, key = "2", message = "2/9"},
+    --     -- 3/9
+    --     three = {prefix = {"Ctrl", "Option"}, key = "3", message = "3/9"},
+    --     -- 4/9
+    --     four = {prefix = {"Ctrl", "Option"}, key = "4", message = "4/9"},
+    --     -- 5/9
+    --     five = {prefix = {"Ctrl", "Option"}, key = "5", message = "5/9"},
+    --     -- 6/9
+    --     six = {prefix = {"Ctrl", "Option"}, key = "6", message = "6/9"},
+    --     -- 7/9
+    --     seven = {prefix = {"Ctrl", "Option"}, key = "7", message = "7/9"},
+    --     -- 8/9
+    --     eight = {prefix = {"Ctrl", "Option"}, key = "8", message = "8/9"},
+    --     -- 9/9
+    --     nine = {prefix = {"Ctrl", "Option"}, key = "9", message = "9/9"},
     -- 左 1/3（横屏）或上 1/3（竖屏）
     left_1_3 = {
         prefix = {"Ctrl", "Option"},
@@ -158,6 +158,11 @@ applications = {
         bundleId = "com.apple.finder"
     }, {
         prefix = {"Option"},
+        key = "R",
+        message = "RubyMine",
+        bundleId = "com.jetbrains.rubymine"
+    }, {
+        prefix = {"Option"},
         key = "4",
         message = "Chrome",
         bundleId = "com.google.Chrome"
@@ -223,22 +228,41 @@ password_paste = {
     message = "Password Paste"
 }
 
--- Spotify快捷键配置
+-- Spotify
 spotify = {
     play = {
         prefix = {"Command", "Ctrl", "Option"},
         key = "P",
-        message = "Play/Pause Spotify"
+        message = "Spotify: Play/Pause"
     },
     next = {
         prefix = {"Command", "Ctrl", "Option"},
         key = "J",
-        message = "Play Next Spotify"
+        message = "Spotify Next"
     },
     previous = {
         prefix = {"Command", "Ctrl", "Option"},
         key = "K",
-        message = "Play Previous Spotify"
+        message = "Spotify Previous"
+    }
+}
+
+-- Sound
+sound = {
+    mute = {
+        prefix = {"Command", "Ctrl", "Option"},
+        key = "M",
+        message = "Mute/Unmute"
+    },
+    down = {
+        prefix = {"Command", "Ctrl", "Option"},
+        key = ",",
+        message = "Volume Down"
+    },
+    up = {
+        prefix = {"Command", "Ctrl", "Option"},
+        key = ".",
+        message = "Volume Up"
     }
 }
 
