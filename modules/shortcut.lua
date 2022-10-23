@@ -175,7 +175,7 @@ applications = {
     {prefix = {"Option"}, key = "N", message = "Notion", bundleId = "notion.id"},
     {
         prefix = {"Option"},
-        key = "G",
+        key = "D",
         message = "DataGrip",
         bundleId = "com.jetbrains.datagrip"
     }, {
