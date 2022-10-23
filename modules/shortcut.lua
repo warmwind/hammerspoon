@@ -206,7 +206,7 @@ applications = {
         bundleId = "com.apple.systempreferences"
     }, {
         prefix = {"Option"},
-        key = "Z",
+        key = "E",
         message = "WebStorm",
         bundleId = "com.jetbrains.WebStorm"
     }
@@ -219,7 +219,7 @@ input_methods = {
 }
 
 -- 表情包搜索快捷键配置
-emoji_search = {prefix = {"Option"}, key = "E", message = "Emoji Search"}
+-- emoji_search = {prefix = {"Option"}, key = "E", message = "Emoji Search"}
 
 -- 密码粘贴快捷键配置
 password_paste = {
