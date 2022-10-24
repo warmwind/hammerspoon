@@ -13,53 +13,53 @@ local AUTO_LAYOUT_TYPE = {
     HORIZONTAL_OR_VERTICAL = "HORIZONTAL_OR_VERTICAL",
 }
 
--- 同一应用的所有窗口自动网格式布局
-if windows.same_application_auto_layout_grid ~= nil then
-    hs.hotkey.bind(
-        windows.same_application_auto_layout_grid.prefix,
-        windows.same_application_auto_layout_grid.key,
-        windows.same_application_auto_layout_grid.message,
-        function()
-            same_application(AUTO_LAYOUT_TYPE.GRID)
-        end
-    )
-end
+-- -- 同一应用的所有窗口自动网格式布局
+-- if windows.same_application_auto_layout_grid ~= nil then
+--     hs.hotkey.bind(
+--         windows.same_application_auto_layout_grid.prefix,
+--         windows.same_application_auto_layout_grid.key,
+--         windows.same_application_auto_layout_grid.message,
+--         function()
+--             same_application(AUTO_LAYOUT_TYPE.GRID)
+--         end
+--     )
+-- end
 
--- 同一应用的所有窗口自动水平均分或垂直均分
-if windows.same_application_auto_layout_horizontal_or_vertical ~= nil then
-    hs.hotkey.bind(
-        windows.same_application_auto_layout_horizontal_or_vertical.prefix,
-        windows.same_application_auto_layout_horizontal_or_vertical.key,
-        windows.same_application_auto_layout_horizontal_or_vertical.message,
-        function()
-            same_application(AUTO_LAYOUT_TYPE.HORIZONTAL_OR_VERTICAL)
-        end
-    )
-end
+-- -- 同一应用的所有窗口自动水平均分或垂直均分
+-- if windows.same_application_auto_layout_horizontal_or_vertical ~= nil then
+--     hs.hotkey.bind(
+--         windows.same_application_auto_layout_horizontal_or_vertical.prefix,
+--         windows.same_application_auto_layout_horizontal_or_vertical.key,
+--         windows.same_application_auto_layout_horizontal_or_vertical.message,
+--         function()
+--             same_application(AUTO_LAYOUT_TYPE.HORIZONTAL_OR_VERTICAL)
+--         end
+--     )
+-- end
 
--- 同一工作空间下的所有窗口自动网格式布局
-if windows.same_space_auto_layout_grid ~= nil then
-    hs.hotkey.bind(
-        windows.same_space_auto_layout_grid.prefix,
-        windows.same_space_auto_layout_grid.key,
-        windows.same_space_auto_layout_grid.message,
-        function()
-            same_space(AUTO_LAYOUT_TYPE.GRID)
-        end
-    )
-end
+-- -- 同一工作空间下的所有窗口自动网格式布局
+-- if windows.same_space_auto_layout_grid ~= nil then
+--     hs.hotkey.bind(
+--         windows.same_space_auto_layout_grid.prefix,
+--         windows.same_space_auto_layout_grid.key,
+--         windows.same_space_auto_layout_grid.message,
+--         function()
+--             same_space(AUTO_LAYOUT_TYPE.GRID)
+--         end
+--     )
+-- end
 
--- 同一工作空间下的所有窗口自动水平均分或垂直均分
-if windows.same_space_auto_layout_horizontal_or_vertical ~= nil then
-    hs.hotkey.bind(
-        windows.same_space_auto_layout_horizontal_or_vertical.prefix,
-        windows.same_space_auto_layout_horizontal_or_vertical.key,
-        windows.same_space_auto_layout_horizontal_or_vertical.message,
-        function()
-            same_space(AUTO_LAYOUT_TYPE.HORIZONTAL_OR_VERTICAL)
-        end
-    )
-end
+-- -- 同一工作空间下的所有窗口自动水平均分或垂直均分
+-- if windows.same_space_auto_layout_horizontal_or_vertical ~= nil then
+--     hs.hotkey.bind(
+--         windows.same_space_auto_layout_horizontal_or_vertical.prefix,
+--         windows.same_space_auto_layout_horizontal_or_vertical.key,
+--         windows.same_space_auto_layout_horizontal_or_vertical.message,
+--         function()
+--             same_space(AUTO_LAYOUT_TYPE.HORIZONTAL_OR_VERTICAL)
+--         end
+--     )
+-- end
 
 function same_application(auto_layout_type)
     local focusedWindow = hs.window.focusedWindow()
@@ -468,114 +468,114 @@ end)
 -- end)
 
 -- 左 1/3（横屏）或上 1/3（竖屏）
-hs.hotkey.bind(windows.left_1_3.prefix, windows.left_1_3.key, windows.left_1_3.message, function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-    -- 如果为竖屏
-    if isVerticalScreen(screen) then
-        f.x = max.x
-        f.y = max.y
-        f.w = max.w
-        f.h = max.h / 3
-        -- 如果为横屏
-    else
-        f.x = max.x
-        f.y = max.y
-        f.w = max.w / 3
-        f.h = max.h
-    end
-    win:setFrame(f)
-end)
+-- hs.hotkey.bind(windows.left_1_3.prefix, windows.left_1_3.key, windows.left_1_3.message, function()
+--     local win = hs.window.focusedWindow()
+--     local f = win:frame()
+--     local screen = win:screen()
+--     local max = screen:frame()
+--     -- 如果为竖屏
+--     if isVerticalScreen(screen) then
+--         f.x = max.x
+--         f.y = max.y
+--         f.w = max.w
+--         f.h = max.h / 3
+--         -- 如果为横屏
+--     else
+--         f.x = max.x
+--         f.y = max.y
+--         f.w = max.w / 3
+--         f.h = max.h
+--     end
+--     win:setFrame(f)
+-- end)
 
 -- 中 1/3
-hs.hotkey.bind(windows.middle.prefix, windows.middle.key, windows.middle.message, function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-    -- 如果为竖屏
-    if isVerticalScreen(screen) then
-        f.x = max.x
-        f.y = max.y + (max.h / 3)
-        f.w = max.w
-        f.h = max.h / 3
-        -- 如果为横屏
-    else
-        f.x = max.x + (max.w / 3)
-        f.y = max.y
-        f.w = max.w / 3
-        f.h = max.h
-    end
-    win:setFrame(f)
-end)
+-- hs.hotkey.bind(windows.middle.prefix, windows.middle.key, windows.middle.message, function()
+--     local win = hs.window.focusedWindow()
+--     local f = win:frame()
+--     local screen = win:screen()
+--     local max = screen:frame()
+--     -- 如果为竖屏
+--     if isVerticalScreen(screen) then
+--         f.x = max.x
+--         f.y = max.y + (max.h / 3)
+--         f.w = max.w
+--         f.h = max.h / 3
+--         -- 如果为横屏
+--     else
+--         f.x = max.x + (max.w / 3)
+--         f.y = max.y
+--         f.w = max.w / 3
+--         f.h = max.h
+--     end
+--     win:setFrame(f)
+-- end)
 
 -- 右 1/3（横屏）或下 1/3（竖屏）
-hs.hotkey.bind(windows.right_1_3.prefix, windows.right_1_3.key, windows.right_1_3.message, function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-    -- 如果为竖屏
-    if isVerticalScreen(screen) then
-        f.x = max.x
-        f.y = max.y + (max.h / 3 * 2)
-        f.w = max.w
-        f.h = max.h / 3
-        -- 如果为横屏
-    else
-        f.x = max.x + (max.w / 3 * 2)
-        f.y = max.y
-        f.w = max.w / 3
-        f.h = max.h
-    end
-    win:setFrame(f)
-end)
+-- hs.hotkey.bind(windows.right_1_3.prefix, windows.right_1_3.key, windows.right_1_3.message, function()
+--     local win = hs.window.focusedWindow()
+--     local f = win:frame()
+--     local screen = win:screen()
+--     local max = screen:frame()
+--     -- 如果为竖屏
+--     if isVerticalScreen(screen) then
+--         f.x = max.x
+--         f.y = max.y + (max.h / 3 * 2)
+--         f.w = max.w
+--         f.h = max.h / 3
+--         -- 如果为横屏
+--     else
+--         f.x = max.x + (max.w / 3 * 2)
+--         f.y = max.y
+--         f.w = max.w / 3
+--         f.h = max.h
+--     end
+--     win:setFrame(f)
+-- end)
 
 -- 左 2/3（横屏）或上 2/3（竖屏）
-hs.hotkey.bind(windows.left_2_3.prefix, windows.left_2_3.key, windows.left_2_3.message, function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-    -- 如果为竖屏
-    if isVerticalScreen(screen) then
-        f.x = max.x
-        f.y = max.y
-        f.w = max.w
-        f.h = max.h / 3 * 2
-        -- 如果为横屏
-    else
-        f.x = max.x
-        f.y = max.y
-        f.w = max.w / 3 * 2
-        f.h = max.h
-    end
-    win:setFrame(f)
-end)
+-- hs.hotkey.bind(windows.left_2_3.prefix, windows.left_2_3.key, windows.left_2_3.message, function()
+--     local win = hs.window.focusedWindow()
+--     local f = win:frame()
+--     local screen = win:screen()
+--     local max = screen:frame()
+--     -- 如果为竖屏
+--     if isVerticalScreen(screen) then
+--         f.x = max.x
+--         f.y = max.y
+--         f.w = max.w
+--         f.h = max.h / 3 * 2
+--         -- 如果为横屏
+--     else
+--         f.x = max.x
+--         f.y = max.y
+--         f.w = max.w / 3 * 2
+--         f.h = max.h
+--     end
+--     win:setFrame(f)
+-- end)
 
 -- 右 2/3（横屏）或下 2/3（竖屏）
-hs.hotkey.bind(windows.right_2_3.prefix, windows.right_2_3.key, windows.right_2_3.message, function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
-    -- 如果为竖屏
-    if isVerticalScreen(screen) then
-        f.x = max.x
-        f.y = max.y + (max.h / 3)
-        f.w = max.w
-        f.h = max.h / 3 * 2
-        -- 如果为横屏
-    else
-        f.x = max.x + (max.w / 3)
-        f.y = max.y
-        f.w = max.w / 3 * 2
-        f.h = max.h
-    end
-    win:setFrame(f)
-end)
+-- hs.hotkey.bind(windows.right_2_3.prefix, windows.right_2_3.key, windows.right_2_3.message, function()
+--     local win = hs.window.focusedWindow()
+--     local f = win:frame()
+--     local screen = win:screen()
+--     local max = screen:frame()
+--     -- 如果为竖屏
+--     if isVerticalScreen(screen) then
+--         f.x = max.x
+--         f.y = max.y + (max.h / 3)
+--         f.w = max.w
+--         f.h = max.h / 3 * 2
+--         -- 如果为横屏
+--     else
+--         f.x = max.x + (max.w / 3)
+--         f.y = max.y
+--         f.w = max.w / 3 * 2
+--         f.h = max.h
+--     end
+--     win:setFrame(f)
+-- end)
 
 -- 判断指定屏幕是否为竖屏
 function isVerticalScreen(screen)

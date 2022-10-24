@@ -8,30 +8,30 @@ shortcut_config = {version = 1.0}
 
 -- 窗口管理快捷键配置
 windows = {
-    -- 同一应用的所有窗口自动网格式布局 
-    same_application_auto_layout_grid = {
-        prefix = {"Ctrl", "Option"},
-        key = "Z",
-        message = ""
-    },
-    -- 同一应用的所有窗口自动水平均分或垂直均分 
-    same_space_auto_layout_grid = {
-        prefix = {"Ctrl", "Option"},
-        key = "X",
-        message = ""
-    },
-    -- 同一工作空间下的所有窗口自动网格式布局
-    same_application_auto_layout_horizontal_or_vertical = {
-        prefix = {"Ctrl", "Option"},
-        key = "A",
-        message = ""
-    },
-    -- 同一工作空间下的所有窗口自动水平均分或垂直均分 
-    same_space_auto_layout_horizontal_or_vertical = {
-        prefix = {"Ctrl", "Option"},
-        key = "S",
-        message = ""
-    },
+    -- -- 同一应用的所有窗口自动网格式布局 
+    -- same_application_auto_layout_grid = {
+    --     prefix = {"Ctrl", "Option"},
+    --     key = "Z",
+    --     message = ""
+    -- },
+    -- -- 同一应用的所有窗口自动水平均分或垂直均分 
+    -- same_space_auto_layout_grid = {
+    --     prefix = {"Ctrl", "Option"},
+    --     key = "X",
+    --     message = ""
+    -- },
+    -- -- 同一工作空间下的所有窗口自动网格式布局
+    -- same_application_auto_layout_horizontal_or_vertical = {
+    --     prefix = {"Ctrl", "Option"},
+    --     key = "A",
+    --     message = ""
+    -- },
+    -- -- 同一工作空间下的所有窗口自动水平均分或垂直均分 
+    -- same_space_auto_layout_horizontal_or_vertical = {
+    --     prefix = {"Ctrl", "Option"},
+    --     key = "S",
+    --     message = ""
+    -- },
     -- 左半屏
     left = {prefix = {"Ctrl", "Option"}, key = "Left", message = "Left Half"},
     -- 右半屏
@@ -75,31 +75,31 @@ windows = {
     --     -- 9/9
     --     nine = {prefix = {"Ctrl", "Option"}, key = "9", message = "9/9"},
     -- 左 1/3（横屏）或上 1/3（竖屏）
-    left_1_3 = {
-        prefix = {"Ctrl", "Option"},
-        key = "D",
-        message = "Left/Top 1/3"
-    },
-    -- 中 1/3
-    middle = {prefix = {"Ctrl", "Option"}, key = "F", message = "Middle 1/3"},
-    -- 右 1/3（横屏）或下 1/3（竖屏）
-    right_1_3 = {
-        prefix = {"Ctrl", "Option"},
-        key = "G",
-        message = "Right/Bottom 1/3)"
-    },
-    -- 左 2/3（横屏）或上 2/3（竖屏）
-    left_2_3 = {
-        prefix = {"Ctrl", "Option"},
-        key = "E",
-        message = "Left/Top 2/3"
-    },
-    -- 右 2/3（横屏）或下 2/3（竖屏）
-    right_2_3 = {
-        prefix = {"Ctrl", "Option"},
-        key = "T",
-        message = "Right/Bottom 2/3"
-    },
+    -- left_1_3 = {
+    --     prefix = {"Ctrl", "Option"},
+    --     key = "D",
+    --     message = "Left/Top 1/3"
+    -- },
+    -- -- 中 1/3
+    -- middle = {prefix = {"Ctrl", "Option"}, key = "F", message = "Middle 1/3"},
+    -- -- 右 1/3（横屏）或下 1/3（竖屏）
+    -- right_1_3 = {
+    --     prefix = {"Ctrl", "Option"},
+    --     key = "G",
+    --     message = "Right/Bottom 1/3)"
+    -- },
+    -- -- 左 2/3（横屏）或上 2/3（竖屏）
+    -- left_2_3 = {
+    --     prefix = {"Ctrl", "Option"},
+    --     key = "E",
+    --     message = "Left/Top 2/3"
+    -- },
+    -- -- 右 2/3（横屏）或下 2/3（竖屏）
+    -- right_2_3 = {
+    --     prefix = {"Ctrl", "Option"},
+    --     key = "T",
+    --     message = "Right/Bottom 2/3"
+    -- },
     -- 居中
     center = {prefix = {"Ctrl", "Option"}, key = "C", message = "Center"},
     -- 等比例放大窗口
